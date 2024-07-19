@@ -1,9 +1,10 @@
-package com.demo1.AdderSubtractorSynchronizedMethod;
+package com.demo1.AdderSubtractorDifferentObject;
 
 public class Main {
-
+    
     public static void main(String[] args) throws InterruptedException {
         Count count = new Count();
+        //Count count2=new Count();
         Adder adder = new Adder(count);
         Subtractor subtractor = new Subtractor(count);
 
@@ -17,5 +18,6 @@ public class Main {
 
 
         System.out.println(count.getValue());
+       // System.out.println(count2.getValue());
     }
 }

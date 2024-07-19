@@ -1,4 +1,4 @@
-package com.demo1.AdderSubtractorSynchronizedMethod;
+package com.demo1.AdderSubtractorDifferentObject;
 
 
 public class Subtractor implements Runnable{
