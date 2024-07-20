@@ -15,7 +15,7 @@ public class Car {
         public String toString() {
             return "[Name = "+this.name +" price = "+this.price +" speed  ="+this.speed +" ]\n";
         }
-
+//
 //            toString(){
 //                System.out.println("Name = "+name +"price = "+price +"speed  ="+speed);
 //            }

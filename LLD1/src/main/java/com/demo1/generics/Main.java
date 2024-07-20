@@ -16,6 +16,8 @@ public class Main {
         doSomething(dogs);
       //  doSomething(humans);
 
+
+
     }
 
     public static void doSomething(List<? extends Animal> animals){
