@@ -19,7 +19,6 @@ public class Main {
       double a=(double) p5.first;
       double b=(double) p5.second;
         System.out.println(a +" "+ b);
-
         List<Pair> pairList1 = Arrays.asList(p1,p2,p3);
       //  System.out.println(pairList1);
     }
