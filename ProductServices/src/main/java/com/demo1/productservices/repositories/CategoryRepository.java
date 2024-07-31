@@ -1,4 +1,6 @@
 package com.demo1.productservices.repositories;
 
-public interface CategoryRepository {
-}
+import org.springframework.data.jpa.repository.JpaRepository;
+
+//public interface CategoryRepository extends JpaRepository {
+//}

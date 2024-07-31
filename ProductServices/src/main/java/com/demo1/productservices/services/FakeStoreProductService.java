@@ -20,7 +20,7 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Service("FakeStoreProductService")
 public class FakeStoreProductService implements ProductService {
 
     RestTemplate restTemplate;
@@ -136,7 +136,7 @@ public class FakeStoreProductService implements ProductService {
                 HttpMethod.DELETE, requestCallback, responseExtractor);
         return convertFakeStoreDtoToProduct(response);
     }
-    //
+    //No static needed
     private Product convertFakeStoreDtoToProduct(FakeStoreDto fakeStoreDto){
         Product product=new Product();
         product.setId(fakeStoreDto.getId());
