@@ -136,7 +136,7 @@ public class FakeStoreProductService implements ProductService {
                 HttpMethod.DELETE, requestCallback, responseExtractor);
         return convertFakeStoreDtoToProduct(response);
     }
-
+//sample Line added
     private Product convertFakeStoreDtoToProduct(FakeStoreDto fakeStoreDto){
         Product product=new Product();
         product.setId(fakeStoreDto.getId());
