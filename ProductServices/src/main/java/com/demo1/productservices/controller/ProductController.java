@@ -45,10 +45,26 @@ public class ProductController {
 
 
        // this is for HTTP status
-        ResponseEntity<Product> responseEntity =new ResponseEntity<>(
-                productService.getSingleProduct(id), HttpStatus.FORBIDDEN
-        );
-        return responseEntity;
+//        ResponseEntity<Product> responseEntity =new ResponseEntity<>(
+//                productService.getSingleProduct(id), HttpStatus.OK
+//        );
+//        return responseEntity;
+//       Product product=productService.getSingleProduct(id);
+//
+//        if(product==null){
+//           throw new productNotFoundException(id);
+//        }
+//        ResponseEntity<Product> responseEntity=new ResponseEntity<>(product, HttpStatus.OK);
+//        return responseEntity;
+        try{
+            Product product=productService.getSingleProduct(id);
+            ResponseEntity<Product> responseEntity=new ResponseEntity<>(product, HttpStatus.OK);
+            return responseEntity;
+        }
+        catch(productNotFoundException e){
+           throw new productNotFoundException(id);
+
+        }
 
     }
 

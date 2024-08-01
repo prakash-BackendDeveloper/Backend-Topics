@@ -2,6 +2,7 @@ package com.demo1.productservices.controllerAdvice;
 
 import com.demo1.productservices.dto.ExceptionDto;
 import com.demo1.productservices.exceptions.productNotFoundException;
+import com.demo1.productservices.models.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -24,9 +25,9 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(productNotFoundException.class)
-    public ResponseEntity<ExceptionDto>  productNotFoundExceptionHandler(){
+    public ResponseEntity<ExceptionDto>  productNotFoundExceptionHandler(productNotFoundException exception){
         ExceptionDto exceptionDto = new ExceptionDto();
-        exceptionDto.setMessage("Product Not Found");
+        exceptionDto.setMessage("The Given Product_id " + exception.getProductId()+" is not valid");
         exceptionDto.setSolution("Please try it again with a valid id");
         ResponseEntity<ExceptionDto> response = new ResponseEntity<>(
                 exceptionDto,
