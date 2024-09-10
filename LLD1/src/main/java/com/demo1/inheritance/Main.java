@@ -9,11 +9,13 @@ public class Main {
 //         a.printNumber();
 //     }
 
-        String s1="Hello";
-        String s2="Bye";
+//        String s1="Hello";
+//        String s2="Bye";
+//
+//        String s3=s1.concat(s2);
+//        System.out.println(s3);
 
-        String s3=s1.concat(s2);
-        System.out.println(s3);
+        A a=new B();
 
       }
     }
