@@ -18,9 +18,10 @@ public class Car implements Comparable<Car> {
             return "[Name = "+this.name +" price = "+this.price +" speed  ="+this.speed +" ]\n";
         }
 
+
     @Override
     public int compareTo(Car o) {
-        return this.price-o.price;
+        return o.speed-this.speed;
     }
 
 //            toString(){
